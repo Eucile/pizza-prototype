@@ -7,7 +7,7 @@
 
 Using for loops and constructors, this website parses user input and returns a price depending on different factors, such as the size of the pizza and the toppings selected.  
 
-##Behavior-driven Development steps:
+## Behavior-driven Development steps:
 
 || **Program gathers size and returns price** Input: "small" | Output: "$8" |
 | **Program arrays values assigned to multiple topping inputs through checkbox forms**| User Input: "cheese & peppers" | Output: "['0.75', '0.25']" |
