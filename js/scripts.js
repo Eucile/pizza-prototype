@@ -29,11 +29,10 @@ $(document).ready(function() {
       parseFloat($("input:checkbox:checked").each(function() {
       inputtedToppings.push($(this).val());
       console.log(inputtedToppings);
-
     }));
 
       var newPizza = new Pizza(inputtedSize, inputtedToppings);
-      var displayPrice = newPizza.cost();
+      var displayPrice = newPizza.cost().toFixed(2);
       $(".price").text(displayPrice);
 
   });
