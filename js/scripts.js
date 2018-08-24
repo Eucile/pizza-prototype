@@ -22,7 +22,7 @@ if (this.size === "small") {
 $(document).ready(function() {
   $("form#pizza-form").submit(function(event) {
       event.preventDefault();
-      $("#cost-show").show();
+      $(".cost-show").fadeIn(1000);
       var inputtedSize = $("select#size").val();
       var inputtedToppings = [];
       parseFloat($("input:checkbox:checked").each(function() {
@@ -33,6 +33,5 @@ $(document).ready(function() {
       var displayPrice = newPizza.cost().toFixed(2);
       $(".size-text").text(inputtedSize);
       $(".price").text(displayPrice);
-
   });
 });

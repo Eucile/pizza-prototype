@@ -1,4 +1,4 @@
-# Pizza Planet 
+# Pizza Planet
 
 #### Webpage that takes user orders and returns the appropriate price using basic prototype logic 24 Aug 2018
 #### By Krystal Foster
@@ -9,7 +9,7 @@ Using for loops and constructors, this website parses user input and returns a p
 
 Behavior-driven Development steps:
 
-**Program gathers size and returns price** | Input: "small" | Output: "$8" |
+|| **Program gathers size and returns price** Input: "small" | Output: "$8" |
 | **Program arrays values assigned to multiple topping inputs through checkbox forms**| User Input: "cheese & peppers" | Output: "['0.75', '0.25']" |
 | **Program calculates the price of the pizza, adding the extra topping values**| Input: "small pizza with cheese & peppers" | Output:"$9" |
 | **Program returns price to the second decimal point** | Input: "small pizza with olives and peppers" | Output: "$8.50" |

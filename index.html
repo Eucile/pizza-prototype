@@ -9,6 +9,7 @@
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <title>Pizza Planet</title>
   </head>
   <body>
@@ -21,10 +22,13 @@
           <div class="form-group">
             <label for="size"><strong>What size?</strong></label>
             <select id="size" class="form-control form-control-sm">
-              <option value="small">Small 10"</option>
-              <option value="medium">Medium 12"</option>
-              <option value="large">Large 18"</option>
+              <option value="small"> Small 10"</option>
+              <option value="medium"> Medium 12"</option>
+              <option value="large"> Large 18"</option>
             </select>
+          </div>
+          <div class="cost-show">
+            <p>You ordered a <span class="size-text"></span> pizza!</br> Your order will cost: $<span class="price"></span></p>
           </div>
           <div class="form-group">
             <p><strong>What toppings would you like?</strong></p>
@@ -41,10 +45,7 @@
           </div>
           <button type="submit" class="btn btn-info">Submit Your Order</button>
         </form>
-        <div id="cost-show">
-          <p>You ordered a <span class="size-text"></span> pizza. Your order will cost: $<span class="price"></span></p>
-        </div>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
