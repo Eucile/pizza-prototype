@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -14,7 +13,36 @@
   </head>
   <body>
     <div class="container">
-      
+      <div class="jumbotron">
+        <h2>Place Your Order Here:</h2>
+      </div>
+      <form id="pizza-form">
+        <div class="form-group">
+          <label for="size">What size?</label>
+          <select id="size" class="form-control">
+            <option value="small">Small 10"</option>
+            <option value="medium">Medium 12"</option>
+            <option value="large">Large 18"</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>What toppings would you like?</p>
+          <input type="checkbox" name="toppings-list" value="cheese">Cheese<br>
+          <input type="checkbox" name="toppings-list" value="pepperoni">Pepperoni<br>
+          <input type="checkbox" name="toppings-list" value="anchovies">Anchovies<br>
+          <input type="checkbox" name="toppings-list" value="olives">Olives<br>
+          <input type="checkbox" name="toppings-list" value="pineapple">Pinapple<br>
+          <input type="checkbox" name="toppings-list" value="sausage">Sausage<br>
+          <input type="checkbox" name="toppings-list" value="chicken">bbq chicken<br>
+          <input type="checkbox" name="toppings-list" value="peppers">Peppers<br>
+          <input type="checkbox" name="toppings-list" value="onions">Onions<br>
+          <input type="checkbox" name="toppings-list" value="tomatoes">Tomatoes<br>
+        </div>
+       <button type="submit">Submit Your Order</button>
+      </form>
+      <div id="cost-show">
+        <p>Your order will cost: $<span class="price"></span></p>
+      </div>
     </div>
   </body>
 </html>

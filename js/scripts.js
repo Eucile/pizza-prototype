@@ -1,18 +1,36 @@
 //Business Logic
 
-function Pizza(topping, size, quantity) {
-  this.toppings = topping;
+function Pizza(size, topping) {
   this.size = size;
-  this.quantity = quantity;
-}
+  this.topping = topping;
+};
 
 Pizza.prototype.cost = function() {
   var cost = 0;
   if (this.size === "small") {
-    //inster math logic here
+    return cost += 8 + (this.topping * .75);
   } else if (this.size === "medium") {
-    //insetr mathi logic here
+     return cost += 12 + (this.topping * .75);
   } else if (this.size === "large") {
-    ///math logic here 
+    return cost += 14 + (this.topping * .75);
   }
 }
+
+
+$(document).ready(function() {
+  $("form#pizza-form").submit(function(event) {
+      event.preventDefault();
+
+      var inputtedSize = $("select#size").val();
+      var inputtedToppings = [];
+      $("input:checkbox:checked").each(function() {
+      inputtedToppings.push($(this).val());
+      });
+
+
+      var newPizza = new Pizza(inputtedSize, inputtedToppings);
+      var displayPrice = newPizza.cost();
+      $(".price").text(displayPrice);
+
+  });
+});
