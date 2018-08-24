@@ -23,9 +23,9 @@ $(document).ready(function() {
 
       var inputtedSize = $("select#size").val();
       var inputtedToppings = [];
-      $("input:checkbox:checked").each(function() {
+      parseFloat($("input:checkbox:checked").each(function() {
       inputtedToppings.push($(this).val());
-      });
+    }));
 
 
       var newPizza = new Pizza(inputtedSize, inputtedToppings);
