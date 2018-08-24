@@ -5,31 +5,19 @@ function Pizza(size, topping) {
   this.topping = topping;
 };
 
-// Pizza.prototype.cost = function() {
-//   var cost = '';
-//   if (this.size === "small") {
-//     return cost += 8 + (this.topping.length);
-//   } else if (this.size === "medium") {
-//      return cost += 12 + (this.topping.length);
-//   } else if (this.size === "large") {
-//     return cost += 14 + (this.topping.length);
-//   }
-// }
-
 Pizza.prototype.cost = function() {
- var cost = 0;
- for(var i = 0; i >= this.topping.length; i++){
-   cost += this.topping[i];
- };
- if (this.size === "small") {
-   return cost += 8 + (this.topping[i]);
- } else if (this.size === "medium") {
-    return cost += 12;
- } else if (this.size === "large") {
-   return cost += 14;
- }
+var cost = 0;
+for(var i = 0; i < this.topping.length; i++) {
+  cost += parseFloat(this.topping[i]);
 }
-
+if (this.size === "small") {
+  return cost += 8;
+} else if (this.size === "medium") {
+  return cost += 12;
+} else if (this.size === "large") {
+  return cost += 14;
+  }
+}
 
 $(document).ready(function() {
   $("form#pizza-form").submit(function(event) {
