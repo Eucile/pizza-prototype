@@ -33,6 +33,7 @@ $(document).ready(function() {
 
       var newPizza = new Pizza(inputtedSize, inputtedToppings);
       var displayPrice = newPizza.cost().toFixed(2);
+      $(".size-text").text(inputtedSize);
       $(".price").text(displayPrice);
 
   });
