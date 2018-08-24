@@ -6,13 +6,13 @@ function Pizza(size, topping) {
 };
 
 Pizza.prototype.cost = function() {
-  var cost = 0;
+  var cost = '';
   if (this.size === "small") {
-    return cost += 8 + (this.topping * .75);
+    return cost += 8 + (this.topping.length);
   } else if (this.size === "medium") {
-     return cost += 12 + (this.topping * .75);
+     return cost += 12 + (this.topping.length);
   } else if (this.size === "large") {
-    return cost += 14 + (this.topping * .75);
+    return cost += 14 + (this.topping.length);
   }
 }
 
@@ -20,11 +20,14 @@ Pizza.prototype.cost = function() {
 $(document).ready(function() {
   $("form#pizza-form").submit(function(event) {
       event.preventDefault();
+      $("#cost-show").show();
 
       var inputtedSize = $("select#size").val();
       var inputtedToppings = [];
       parseFloat($("input:checkbox:checked").each(function() {
       inputtedToppings.push($(this).val());
+      console.log(inputtedToppings);
+
     }));
 
 
