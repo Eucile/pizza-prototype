@@ -19,6 +19,8 @@ if (this.size === "small") {
 }
 }
 
+//User-interface Logic
+
 $(document).ready(function() {
   $("form#pizza-form").submit(function(event) {
       event.preventDefault();
