@@ -12,11 +12,11 @@ for(var i = 0; i < this.topping.length; i++) {
   }
 if (this.size === "small") {
   return cost += 8;
-  } else if (this.size === "medium") {
+} else if (this.size === "medium") {
   return cost += 12;
-  } else if (this.size === "large") {
+} else if (this.size === "large") {
   return cost += 14;
-  }
+}
 }
 
 $(document).ready(function() {
